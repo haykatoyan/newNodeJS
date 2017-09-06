@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Site</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css"/>
+</head>
+<body style="background-color: skyblue">
+	<% include partials/nav.ejs %>
+	<div align="center">
+		<h1>Welcome to the profile of <%= data.profileOf %></h1>
+		<p>Age: <%= data.age %></p>
+		<p>Age: <%= data.job %></p>
+	
+		<h2>Hobbies: </h2>
+		<ul>
+			<% data.hobbies.forEach(function(item) { %>
+
+				<li><%= item %></li>
+			<% }); %>
+		</ul>
+	</div>
+	
+
+</body>
+</html>
